@@ -1,14 +1,12 @@
-# Sarvam Vani: Indic TTS
+# Vani: Indic TTS
 
-Instant, natural Text-to-Speech for Indian languages. Powered by Sarvam.ai's "Bulbul" models (`bulbul:v3`).
+Fast, natural Text-to-Speech for Indian languages. Powered by Sarvam.ai's "Bulbul" models (`bulbul:v3`).
 
 **Note:** This extension is not affiliated with, endorsed by, or sponsored by Sarvam AI.
 
-![Sarvam Vani Icon](/icons/icon128.png)
-
 ## Overview
 
-**Sarvam Vani** is a Chrome browser extension that allows you to listen to selected text on any webpage in naturally spoken Indian languages. It leverages the powerful `bulbul:v3` API from Sarvam AI to provide high-quality speech synthesis with support for multiple regional languages and speakers.
+**Vani: Indic TTS** is a Chrome browser extension that allows you to listen to selected text on any webpage in naturally spoken Indian languages. It leverages the powerful `bulbul:v3` API from Sarvam AI to provide high-quality speech synthesis with support for multiple regional languages and speakers.
 
 ## Features
 
@@ -16,7 +14,7 @@ Instant, natural Text-to-Speech for Indian languages. Powered by Sarvam.ai's "Bu
 - **Multiple Speakers**: Choose from a variety of natural-sounding voices (e.g., Shubh, Meera, Aditya).
 - **Control Your Experience**: Adjust playback speed (0.5x to 2.0x).
 - **Smart Integration**:
-  - Right-click context menu ("Read with Sarvam Vani").
+  - Right-click context menu to read selected text with **Vani: Indic TTS**.
   - Floating player on the webpage for easy control.
   - Text highlighting to follow along as it reads.
 - **Secure**: API keys are stored locally in your browser (`chrome.storage.local`).
@@ -24,7 +22,7 @@ Instant, natural Text-to-Speech for Indian languages. Powered by Sarvam.ai's "Bu
 ## Project Structure
 
 ```text
-sarvam-vani-tts-extension/
+vani-tts-extension/
 ├── background/             # Service worker for extension events
 │   └── service-worker.js
 ├── content/                # Scripts injected into webpages
@@ -71,7 +69,7 @@ Before using this extension, you'll need a Sarvam AI API key:
 1. **Clone the Repository**:
 
    ```bash
-   git clone https://github.com/1arunjyoti/sarvam-vani-tts-extension.git
+   git clone https://github.com/1arunjyoti/vani-tts-extension.git
    ```
 
 2. **Open Chrome Extensions**:
@@ -80,10 +78,10 @@ Before using this extension, you'll need a Sarvam AI API key:
    
 3. **Load Unpacked**:
    - Click **"Load unpacked"**.
-   - Select the project folder (`sarvam-vani-tts-extension`).
+   - Select the project folder (`indic-tts-extension`).
    
 4. **Pin the Extension**:
-   - Click the puzzle piece icon in your toolbar and pin **Sarvam Vani: Indic TTS**.
+   - Click the puzzle piece icon in your toolbar and pin **Vani: Indic TTS**.
 
 ## Usage
 
@@ -92,7 +90,7 @@ Before using this extension, you'll need a Sarvam AI API key:
    - Open the **API Configuration** section.
    - Enter your Sarvam AI API Key and click **Save Key**.
 2. **Read Text**:
-   - **Option A**: Select text on any webpage, right-click, and choose **"Read with Sarvam Vani"**.
+   - **Option A**: Select text on any webpage, right-click, and choose **"Read with Vani: Indic TTS"**.
    - **Option B**: Open the extension popup, click the **Play** button and it will start reading the website text.
 3. **Controls**:
    - Use the popup or the floating player on the page to **Pause**, **Resume**, or **Stop** playback.
@@ -137,9 +135,9 @@ See [CHANGELOG.md](CHANGELOG.md) for version history and updates.
 
 ## Support
 
-- 🐛 [Report a bug](https://github.com/1arunjyoti/sarvam-vani-tts-extension/issues)
-- 💡 [Request a feature](https://github.com/1arunjyoti/sarvam-vani-tts-extension/issues)
-- 📖 [Read the docs](https://github.com/1arunjyoti/sarvam-vani-tts-extension)
+- 🐛 [Report a bug](https://github.com/1arunjyoti/vani-tts-extension/issues)
+- 💡 [Request a feature](https://github.com/1arunjyoti/vani-tts-extension/issues)
+- 📖 [Read the docs](https://github.com/1arunjyoti/vani-tts-extension)
 
 ## Acknowledgments
 
@@ -148,4 +146,4 @@ See [CHANGELOG.md](CHANGELOG.md) for version history and updates.
 
 ## License
 
-MIT License. Not affiliated with Sarvam AI.
+MIT License.

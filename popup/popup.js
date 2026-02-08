@@ -1,4 +1,4 @@
-// Sarvam TTS Popup Script
+//  Vani: Indic TTS Popup Script
 import { 
   LANGUAGES,
   MODELS,

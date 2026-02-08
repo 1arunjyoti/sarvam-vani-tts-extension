@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to Sarvam Vani will be documented in this file.
+All notable changes to Vani: Indic TTS will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
@@ -8,12 +8,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.0] - 2026-02-08
 
 ### Added
-- Initial release of Sarvam Vani: Indic TTS
+- Initial release of Vani: Indic TTS
 - Support for 11 Indian languages (Hindi, English-IN, Bengali, Gujarati, Kannada, Malayalam, Marathi, Odia, Punjabi, Tamil, Telugu)
 - 39 natural-sounding voices for Bulbul v3 model
 - 7 voices for Bulbul v2 model
 - Variable playback speed (0.5x to 2.0x)
-- Context menu integration ("Read with Sarvam TTS")
+- Context menu integration ("Read with Vani: Indic TTS")
 - Text highlighting during playback
 - Auto page content reading when no text selected
 - Automatic page language detection

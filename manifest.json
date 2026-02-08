@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Sarvam Vani: Indic TTS",
+  "name": "Vani: Indic TTS",
   "version": "1.0.0",
-  "description": "Instant, natural Text-to-Speech for Indian languages. Powered by Sarvam AI.",
+  "description": "Fast, natural Text-to-Speech for Indian languages. Powered by Sarvam AI.",
 
   "permissions": [
     "contextMenus",
@@ -19,7 +19,7 @@
       "48": "icons/icon48.png",
       "128": "icons/icon128.png"
     },
-    "default_title": "Sarvam Vani: Indic TTS"
+    "default_title": "Vani: Indic TTS"
   },
 
   "background": {

@@ -1,4 +1,4 @@
-// Floating Player for Sarvam TTS
+// Floating Player for Vani: Indic TTS
 // Creates a draggable mini player on the page
 
 (function() {

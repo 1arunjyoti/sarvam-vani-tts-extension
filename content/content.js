@@ -1,4 +1,4 @@
-// Sarvam TTS Content Script
+//  Vani: Indic TTS Content Script
 // Handles text selection and highlighting on web pages
 
 // Inline logger for content scripts (can't use ES modules in content scripts)
@@ -225,7 +225,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   return false;
 });
 
-logger.log('Sarvam TTS content script loaded');
+logger.log('Indic TTS content script loaded');
 
 // Initialize floating player
 let floatingPlayer = null;

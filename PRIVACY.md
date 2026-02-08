@@ -1,10 +1,10 @@
-# Privacy Policy for Sarvam Vani: Indic TTS
+# Privacy Policy for Vani: Indic TTS
 
 **Last Updated:** February 8, 2026
 
 ## Data Collection & Usage
 
-Sarvam Vani is committed to protecting your privacy. This extension:
+Vani: Indic TTS is committed to protecting your privacy. This extension:
 
 ### What We DO:
 - ✅ Store your Sarvam AI API key locally in your browser using `chrome.storage.local`
@@ -37,7 +37,7 @@ This extension uses **Sarvam AI's Text-to-Speech API**:
 
 - **storage**: Save your preferences and API key locally
 - **activeTab**: Read selected text from the current webpage
-- **contextMenus**: Add "Read with Sarvam TTS" to right-click menu
+- **contextMenus**: Add "Read with Vani: Indic TTS" to right-click menu
 - **offscreen**: Play audio (Chrome's audio playback requirement)
 - **scripting**: Inject content scripts for text highlighting
 
@@ -55,13 +55,13 @@ We will update this policy if our practices change. Check the "Last Updated" dat
 ## Contact
 
 For privacy concerns or questions:
-- Open an issue on GitHub: https://github.com/1arunjyoti/sarvam-vani-tts-extension/issues
+- Open an issue on GitHub: https://github.com/1arunjyoti/vani-tts-extension/issues
 
 ## Open Source
 
 This extension is open source. You can review all code at:
-https://github.com/1arunjyoti/sarvam-vani-tts-extension
+https://github.com/1arunjyoti/vani-tts-extension
 
 ---
 
-**Note:** This extension is not affiliated with, endorsed by, or sponsored by Sarvam AI.
+**Note:** This extension is an open-source community project.

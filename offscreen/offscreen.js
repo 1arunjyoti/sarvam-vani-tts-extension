@@ -1,4 +1,4 @@
-// Sarvam TTS Offscreen Audio Player
+//  Vani: Indic TTS Offscreen Audio Player
 import { MESSAGE_TYPES, PLAYBACK_STATES } from '../shared/constants.js';
 import { logger } from '../shared/logger.js';
 
@@ -157,4 +157,4 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   return false;
 });
 
-logger.log('Sarvam TTS Offscreen document ready');
+logger.log('Vani: Indic TTS Offscreen document ready');

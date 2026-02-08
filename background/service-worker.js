@@ -1,4 +1,4 @@
-// Sarvam TTS Background Service Worker
+// Vani: Indic TTS Background Service Worker
 import { 
   API_ENDPOINT, 
   DEFAULT_SAMPLE_RATE,
@@ -77,17 +77,17 @@ function splitTextIntoChunks(text) {
 
 chrome.runtime.onInstalled.addListener(() => {
   chrome.contextMenus.create({
-    id: 'sarvam-read-text',
-    title: 'Read with Sarvam TTS',
+    id: 'vani-read-text',
+    title: 'Read with Vani: Indic TTS',
     contexts: ['selection']
   });
   
-  logger.log('Sarvam TTS extension installed');
+  logger.log('Vani: Indic TTS extension installed');
 });
 
 // Handle context menu clicks
 chrome.contextMenus.onClicked.addListener(async (info, tab) => {
-  if (info.menuItemId === 'sarvam-read-text' && info.selectionText) {
+  if (info.menuItemId === 'vani-read-text' && info.selectionText) {
     await handlePlayRequest(info.selectionText);
   }
 });
@@ -476,4 +476,4 @@ async function broadcastStateUpdate(state, error = null) {
 }
 
 
-logger.log('Sarvam TTS Background service worker started');
+logger.log('Indic TTS Background service worker started');

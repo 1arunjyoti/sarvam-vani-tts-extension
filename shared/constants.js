@@ -1,4 +1,4 @@
-// Sarvam TTS API Configuration
+// Vani: Indic TTS API Configuration
 export const API_ENDPOINT = "https://api.sarvam.ai/text-to-speech";
 export const DEFAULT_SAMPLE_RATE = 24000;
 
