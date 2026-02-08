@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=400, initial-scale=1.0" />
+    <title>Sarvam Vani: Indic TTS</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <header class="header">
+        <div class="logo">
+          <img
+            src="../icons/icon48.png"
+            alt="Sarvam TTS"
+            width="28"
+            height="28"
+          />
+          <h1>Sarvam Vani</h1>
+        </div>
+        <span class="badge">Bulbul v3</span>
+      </header>
+
+      <!-- API Key Section -->
+      <section class="section api-section" id="apiSection">
+        <div class="section-header">
+          <h2>API Configuration</h2>
+          <button class="icon-btn" id="toggleApiSection" title="Toggle section">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+              <path d="M7 10l5 5 5-5H7z" fill="currentColor" />
+            </svg>
+          </button>
+        </div>
+        <div class="api-content" id="apiContent">
+          <div class="input-group">
+            <label for="apiKey">API Key</label>
+            <div class="input-wrapper">
+              <input
+                type="password"
+                id="apiKey"
+                placeholder="Enter your Sarvam API key"
+              />
+              <button class="icon-btn" id="togglePassword" title="Show/Hide">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <button class="btn btn-secondary" id="saveApiKey">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M17 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V7l-4-4zm-5 16c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm3-10H5V5h10v4z"
+                fill="currentColor"
+              />
+            </svg>
+            Save Key
+          </button>
+          <p class="hint" id="apiStatus"></p>
+        </div>
+      </section>
+
+      <!-- Voice Settings Section -->
+      <section class="section">
+        <h2>Voice Settings</h2>
+        <div class="input-group">
+          <label for="model">Model</label>
+          <select id="model"></select>
+        </div>
+        <div class="input-group">
+          <label for="language"
+            >Language<span id="detectedLang" class="detected-lang"></span
+          ></label>
+          <select id="language"></select>
+        </div>
+        <div class="input-group">
+          <label for="speaker">Speaker</label>
+          <select id="speaker"></select>
+        </div>
+        <div class="input-group">
+          <label for="pace"
+            >Speed <span id="paceValue" class="pace-value">1.0x</span></label
+          >
+          <input
+            type="range"
+            id="pace"
+            min="0.5"
+            max="2"
+            step="0.1"
+            value="1"
+            class="pace-slider"
+          />
+          <div class="pace-labels">
+            <span>0.5x</span>
+            <span>2.0x</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Playback Controls -->
+      <section class="section controls-section">
+        <div class="controls">
+          <button
+            class="btn btn-primary btn-play"
+            id="playPauseBtn"
+            title="Play"
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              id="playIcon"
+            >
+              <path d="M8 5v14l11-7L8 5z" fill="currentColor" />
+            </svg>
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              id="pauseIcon"
+              style="display: none"
+            >
+              <rect
+                x="6"
+                y="4"
+                width="4"
+                height="16"
+                rx="1"
+                fill="currentColor"
+              />
+              <rect
+                x="14"
+                y="4"
+                width="4"
+                height="16"
+                rx="1"
+                fill="currentColor"
+              />
+            </svg>
+          </button>
+
+          <button class="btn btn-control" id="stopBtn" disabled title="Stop">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <rect
+                x="6"
+                y="6"
+                width="12"
+                height="12"
+                rx="2"
+                fill="currentColor"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Loading Indicator -->
+        <div
+          class="loading-indicator"
+          id="loadingIndicator"
+          style="display: none"
+        >
+          <div class="spinner"></div>
+          <span>Generating audio...</span>
+        </div>
+
+        <!-- Status Message -->
+        <p class="status-message" id="statusMessage"></p>
+      </section>
+
+      <!-- Selected Text Display -->
+      <section class="section text-section">
+        <h2>Selected Text</h2>
+        <div class="text-display" id="selectedText">
+          <p class="placeholder">Select text on any webpage, then click Play</p>
+        </div>
+        <div class="char-count" id="charCount"></div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <a href="https://www.sarvam.ai" target="_blank" rel="noopener"
+          >Powered by Sarvam.ai</a
+        >
+        <p class="disclaimer">Not affiliated with Sarvam AI</p>
+      </footer>
+    </div>
+
+    <script src="popup.js" type="module"></script>
+  </body>
+</html>
